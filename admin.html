@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project3 Admin Ramshaw</title>
+  <link rel="stylesheet" href="main4_admin.css">
+</head>
+
+<body>
+	
+	<div class = "box">
+		<h1>Destination</h1>
+		<h1>Donuts Admin</h1>
+	</div>
+	<!--NAVAGATION BAR-->							
+		<div class="navbar">
+    	
+			<div class = "tab">
+				<button class = "dropbtn" style = "color: black;"><a href = "http://localhost:3000"><b>Back to Home</b></a>
+				
+				</button>
+			</div>	
+			
+			<div class = "tab">
+				<button onclick="location.href='#create';" class = "dropbtn"> <b>Create New Donuts</b>
+				</button>
+			</div>
+			
+			<div class = "tab">
+				<button onclick="location.href='#view';" class = "dropbtn"> <b>View Current Donuts</b>
+				
+				</button>
+			</div>
+			
+			<div class = "tab">
+				<button onclick="location.href='#update';" class = "dropbtn"> <b>Update Current Donuts</b>
+				</button>
+			</div>
+			
+			<div class = "tab">
+				<button onclick="location.href='#delete';" class = "dropbtn"> <b>Delete Donuts</b>
+				</button>
+			</div>
+		</div>
+		<!--END OF NAVAGATION BAR-->
+		
+<main>
+        <section class="create-donut">
+            <h2>Create New Donuts</h2>
+            <form id="create">                
+                <label for="donutName">Name:</label>
+                <input type="text" id="donutName" name="donutName" required>
+                
+                <label for="donutDescription">Description:</label>
+                <textarea id="donutDescription" name="donutDescription" required></textarea>
+                
+                <label for="donutPrice">Price (In decimal):</label>
+                <input type="number" id="donutPrice" name="donutPrice" required step="0.01">
+
+                <button type="submit">Save Donut</button>
+            </form>
+         </section>
+         
+        <section class="update-donut">   
+            <h2>Update Current Donuts</h2>
+            <form id="update">
+                <label for="donutId">ID #:</label>
+                <input type="text" id="donutId" name="donutId">
+                
+                <label for="donutName">Name:</label>
+                <input type="text" id="donutName" name="donutName" required>
+                
+                <label for="donutDescription">Description:</label>
+                <textarea id="donutDescription" name="donutDescription" required></textarea>
+                
+                <label for="donutPrice">Price (In decimal):</label>
+                <input type="number" id="donutPrice" name="donutPrice" required step="0.01">
+
+                <button type="submit">Update</button>
+            </form>
+         </section>   
+         
+         <section class = "view-donut">
+           <h2 id = "view">View Current Donuts</h2>
+            <button id ="viewbtn" class="Newdropbtn">View</button>
+            <div id="donuts-list">
+            </div>
+        </section>
+
+        <section id="delete-donut">
+            <h2>Delete Donuts</h2>
+            <form id="delete">
+                <label for="delete-id">ID #:</label>
+                <input type="text" id="delete-id" name="id" required>
+                <button type="submit">Delete</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+		&copy; Developed and created by Mara Ramshaw.
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

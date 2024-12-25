@@ -1,0 +1,207 @@
+html, body
+{
+	background-color: #250C70;
+	font-family: 'Trebuchet MS', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+
+.donut-header
+{
+	background-image: linear-gradient(
+	to top, rgba(0, 0, 255, 0.52)/*blue*/, 
+	rgba(128, 0, 128, 0.73)/*purple*/, 
+	rgba(255, 105, 180, 0.83)/*pink*/), 
+	url('./images/donuts1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	
+	display: flex;
+	flex-direction: column;
+  	align-items: flex-start; 
+  	padding-left: 20px;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 255, 0.52), /* blue */
+        rgba(128, 0, 128, 0.73), /* purple */
+        rgba(255, 105, 180, 0.83) /* pink */
+    );
+    z-index: 2;
+}
+
+
+.donut-box
+{
+	position: relative;
+    z-index: 3;
+    padding-top: 60%;
+    width: 100%;
+}
+
+
+h1
+{
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	font-size: 400%;
+	margin: 0;
+	font-weight: 700;
+}
+
+.button
+{
+	background-color: transparent;
+	border: solid 3px white;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 20px;
+	cursor: pointer;
+	width: 20%;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+	box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.70);
+}
+
+.button:hover
+{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*NAVAGATION BAR*/
+.navbar
+{
+	overflow: hidden;
+  	background-color: white;
+  	margin: none;
+  	box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.70);
+}
+		
+/* The dropdown container */
+.tab
+{
+  	float: left;
+  	overflow: hidden;
+  	border-bottom: 2px solid white;
+}
+
+/* Dropdown button */
+.tab .dropbtn
+{
+  	font-size: 16px; 
+  	border: none;
+  	outline: none;
+  	color: black;
+  	padding: 14px 16px;
+  	background-color: white;
+  	font-family: inherit;
+  	margin: 0;
+}
+
+/* Add background color to navbar links on hover */
+.navbar a:hover, .tab:hover .dropbtn
+{
+  	transition: background-color 0.3s ease;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.90);
+	cursor: pointer;
+}
+/*END OF NAVAGATION BAR*/
+
+.container
+{
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	margin-top: 40px;
+	height: 100vh;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.90);
+}
+
+h3
+{
+	font-size: 30px;
+	margin: 15px;
+	text-align: center;
+	color: black;
+    font-weight: bold;
+}
+
+ul, li
+{
+display: grid;
+  gap: 6px;
+  list-style: none;
+  padding-left: 10px;
+padding-right: 10px;
+  margin: 0 auto;
+max-width: 1200px;
+}
+
+
+.donut-card {
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donut-details {
+    text-align: center; 
+
+}
+
+.donut-details h3 {
+  font-size: 17px; 
+    color: black;
+}
+
+.donut-details p {
+  color: black;
+  font-size: 15px;
+}
+
+.donut-details strong {
+  font-size: 12px;
+  color: black;
+}
+
+
+footer
+{
+	padding: 30px;
+	color: white;
+	text-align: center;
+}
