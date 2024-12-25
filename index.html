@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Shop</title>
+    <link rel="stylesheet" href="main4_admin.css">
+</head>
+<body>
+<div class = "donut-header">
+			<div class = "donut-box">
+
+				<h1>Destination</h1>
+				<h1>Donuts</h1>
+				<button onClick={scrollToMenu} className="button">Explore</button>
+			</div>
+			
+			<img src={donutImage} alt="Donut" className="header-image" />	
+			<div className="gradient-overlay"></div>
+
+		</div>
+		
+		<div class="navbar">
+    	
+			<div class = "tab">
+				<button class = "dropbtn"> <b>About Us</b>
+				</button>
+			</div>	
+							
+			<div class = "tab">
+				<button class = "dropbtn"> <b>Locations</b>
+				</button>
+			</div>
+		
+  			<div class="tab">
+    			<button class="dropbtn"> <b>Contact Us</b>
+    			</button>
+  			</div> 
+		</div>
+		
+		<div class = "container">
+		<div class = "donut-card">
+		<h3 id = "menu">Menu</h3>
+		<div class = "donut-details">
+		<ul>
+			{donuts.map(donut => (
+				<li key = {donut.id}>
+                    <Donut
+                    name={donut.name}
+                    description={donut.description}
+                    price={parseFloat(donut.price)} />
+                </li>
+            ))}    
+        </ul>
+        </div>
+        </div>
+	</div>
+	
+	<div id="root"></div>
+	<footer>&copy; Developed and created by Mara Ramshaw. None of these images belong to me. </footer>
+</body>
+</html>
